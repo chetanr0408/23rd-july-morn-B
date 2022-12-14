@@ -13,15 +13,13 @@ public class base
    protected static WebDriver driver;
 
    public void launchBrowser() throws IOException
-    {  
+    {  //Launch Browser
 	   System.setProperty("webdriver.chrome.driver","E:\\Software Testing\\chromedriver.exe");	
 	   driver=new ChromeDriver();
 	   driver.get(Utility.readDataFromPropertyFile("url"));
 	   Reporter.log("Launching Browser", true);
-	  
-	   Utility.wait(driver,2000);
-	  
-	    }
+	  Utility.wait(driver,2000);
+	  }
    
    public static void closingBrowser()
    {
